@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import './App.css'
 import profileImage from './assets/d2668ae6-b9a9-49a0-a41d-8b9f1dc27408.jpg'
@@ -30,15 +30,11 @@ function Home() {
 }
 
 function App() {
-  useEffect(() => {
-    // Initialize theme from localStorage or default to dark
-    const savedTheme = localStorage.getItem('theme') || 'dark'
-    document.documentElement.setAttribute('data-theme', savedTheme)
-  }, [])
-
+  // The theme initialization is now handled by ThemeContext provider
+  
   return (
     <ThemeProvider>
-      <Router basename="/portfolio">
+      <Router>
         <div className="portfolio-container">
           <nav className="navbar">
             <div className="logo"></div>
