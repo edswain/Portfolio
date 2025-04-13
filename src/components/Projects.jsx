@@ -1,8 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-// Import images with ?url suffix to get their public paths
-import lockedInScreenshot from '../assets/LockedInScreenshot.PNG?url';
-import lockedInScreenshot2 from '../assets/LockedInScreenshot2.PNG?url';
+import lockedInScreenshot from '../assets/LockedInScreenshot.PNG';
+import lockedInScreenshot2 from '../assets/LockedInScreenshot2.PNG';
 
 function ProjectGallery({ images, title }) {
   const [activeIndex, setActiveIndex] = useState(0);
