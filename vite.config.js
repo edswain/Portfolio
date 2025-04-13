@@ -5,5 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/portfolio/',
-  assetsInclude: ['**/*.PNG'],
+  build: {
+    outDir: 'dist',
+  },
+  assetsInclude: ['**/*.PNG']
 })

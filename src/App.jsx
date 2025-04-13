@@ -38,7 +38,7 @@ function App() {
 
   return (
     <ThemeProvider>
-      <Router>
+      <Router basename="/portfolio">
         <div className="portfolio-container">
           <nav className="navbar">
             <div className="logo"></div>
