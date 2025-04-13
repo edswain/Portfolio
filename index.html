@@ -2,106 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/Portfolio/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edward Swain - Portfolio</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        background-color: #f5f5f5;
-        color: #333;
-      }
-      #loading {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        text-align: center;
-        padding: 1rem;
-      }
-      .loading-title {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        color: #3b82f6;
-      }
-      .loading-spinner {
-        border: 4px solid rgba(0, 0, 0, 0.1);
-        border-left-color: #3b82f6;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        animation: spin 1s linear infinite;
-        margin-bottom: 1rem;
-      }
-      @keyframes spin {
-        to { transform: rotate(360deg); }
-      }
-      .fallback-link {
-        margin-top: 1.5rem;
-      }
-      .fallback-link a {
-        color: #3b82f6;
-        text-decoration: none;
-        padding: 0.5rem 1rem;
-        border: 1px solid #3b82f6;
-        border-radius: 4px;
-      }
-    </style>
+    <!-- Start Single Page Apps for GitHub Pages -->
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+    <!-- End Single Page Apps for GitHub Pages -->
+    <script type="module" crossorigin src="/Portfolio/assets/index-gwcnmK_e.js"></script>
+    <link rel="stylesheet" crossorigin href="/Portfolio/assets/index-Dq53UKu7.css">
   </head>
   <body>
-    <div id="root">
-      <div id="loading">
-        <div class="loading-title">Edward Swain Portfolio</div>
-        <div class="loading-spinner"></div>
-        <p>Loading application...</p>
-        <p id="loading-message"></p>
-        <script>
-          // Show loading message and countdown
-          let count = 10;
-          const interval = setInterval(() => {
-            document.getElementById('loading-message').textContent = 
-              `If the application doesn't load in ${count} seconds, try the debug pages below`;
-            count--;
-            if (count <= 0) {
-              clearInterval(interval);
-              document.getElementById('fallback').style.display = 'block';
-            }
-          }, 1000);
-        </script>
-        <div id="fallback" style="display: none;" class="fallback-link">
-          <a href="debug.html">Debug Page</a> &nbsp;|&nbsp; 
-          <a href="minimal.html">Minimal React Example</a>
-        </div>
-      </div>
-    </div>
-    <script>
-      window.addEventListener('DOMContentLoaded', () => {
-        // Attempt to load the main application script
-        const script = document.createElement('script');
-        script.type = 'module';
-        script.src = './assets/index-DQhx0b2E.js';
-        script.crossOrigin = '';
-        
-        // Add event listeners for error handling
-        script.onerror = () => {
-          console.error('Failed to load application script');
-          document.getElementById('loading-message').textContent = 
-            'Error loading application. Please try the debug pages.';
-          document.getElementById('fallback').style.display = 'block';
-        };
-        
-        document.body.appendChild(script);
-        
-        // Also add the CSS file
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = './assets/index-Dq53UKu7.css';
-        link.crossOrigin = '';
-        document.head.appendChild(link);
-      });
-    </script>
+    <div id="root"></div>
   </body>
 </html>
