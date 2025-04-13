@@ -1,5 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
+// Import images with ?url suffix to get their public paths
+import lockedInScreenshot from '../assets/LockedInScreenshot.PNG?url';
+import lockedInScreenshot2 from '../assets/LockedInScreenshot2.PNG?url';
 
 function ProjectGallery({ images, title }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -59,9 +62,8 @@ function Projects() {
       description: 'Discord bot that notifies users when a token is locked on Solana. Rapid response times using a helius rpc node. Utilising websockets and written in javascript',
       technologies: ['Javascript', 'Discord.js', 'Helius API','BlockChain '],
       images: [
-        '/src/assets/LockedInScreenshot.png',
-        '/src/assets/LockedInScreenshot2.png'
-     
+        lockedInScreenshot,
+        lockedInScreenshot2
       ],
       link: '#'
     },
